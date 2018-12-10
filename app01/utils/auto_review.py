@@ -13,7 +13,7 @@ CA_file = cf.get("db", "CA_file")
 
 # db = MySQLdb.connect(host=db_host, user=db_user, passwd=db_password, db=database, ssl={'ssl':{'ca':CA_file}})
 
-#use pool to connect mysql DB
+# use PooledDB to connect mysql DB
 # pool = PooledDB(MySQLdb,3,host=db_host, user=db_user, passwd=db_password, db=database, ssl={'ssl': {'ca': CA_file}})
 
 # db = pool.connection()
