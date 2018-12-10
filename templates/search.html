@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cert data Search</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+</head>
+<body>
+<h3>welcome to search the cert's data<font color="red">(internal only)</font></h3>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="model_name" class="col-sm-3 control-label">Input the hwcert model name</label>
+                <div class="col-sm-5">
+                    <input id="model_name" type="text" name="model_name" class="form-control" placeholder="model_name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="make_name" class="col-sm-3 control-label">Input the hwcert make name</label>
+                <div class="col-sm-5">
+                    <input id="make_name" type="text" name="make_name" class="form-control" placeholder="make_name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="device_name" class="col-sm-3 control-label">Input the component name: </label>
+                <div class="col-sm-5">
+                    <input id="device_name" type="text" name="device_name" class="form-control" placeholder="device_name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="product_name" class="col-sm-3 control-label">Input the OSP or CCSP product name</label>
+                <div class="col-sm-5">
+                    <input id="product_name" type="text" name="product_name" class="form-control" placeholder="product_name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="cert_id" class="col-sm-3 control-label">Input the case number which need to leverage review</label>
+                <div class="col-sm-5">
+                    <input id="cert_id" type="text" name="cert_id" class="form-control" placeholder="case_number">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="kbase_keyword" class="col-sm-3 control-label">Input the keyword in the kbase's title<br><font color="red">(the kbases linked after 2018-10-13 will not be displayed)</font></label>
+                <div class="col-sm-5">
+                    <input id="kbase_keyword" type="text" name="kbase_keyword" class="form-control" placeholder="kbase_keyword">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="account_keyword" class="col-sm-3 control-label">Input the SSO account name or email</label>
+                <div class="col-sm-5">
+                    <input id="account_keyword" type="text" name="account_keyword" class="form-control" placeholder="SSO account or email">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="vendor_keyword" class="col-sm-3 control-label">Input the partner/vendor name</label>
+                <div class="col-sm-5">
+                    <input id="vendor_keyword" type="text" name="vendor_keyword" class="form-control" placeholder="partner/vendor name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="TAM_ack" class="col-sm-3 control-label">The certs waiting on TAM_ACK to become public</label>
+                <div class="col-sm-5">
+                    <input id="TAM_ack" type="text" name="TAM_ack" class="form-control" placeholder="input TAM's SSO account">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="TAM_vendor" class="col-sm-3 control-label">Get TAM's SSO account by vendor name</label>
+                <div class="col-sm-5">
+                    <input id="TAM_vendor" type="text" name="TAM_vendor" class="form-control" placeholder="input vendor's name">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+            <hr>
+            <br>
+            <form action="" method="post" class="form-horizontal">
+                <div class="form-group">
+                {% csrf_token %}
+                <label for="portal_case" class="col-sm-3 control-label">get the case number by the cert portal ID</label>
+                <div class="col-sm-5">
+                    <input id="portal_case" type="text" name="portal_case" class="form-control" placeholder="input the cert portal ID">
+                </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+<br>
+<h4>for any search field you want, please contact jweng@redhat.com</h4>
+</body>
+</html>

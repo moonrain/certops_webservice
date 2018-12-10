@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cert data Search</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3>The kbases with "{{ keyword_in_title }}" in title</h3>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>kbase ID</th>
+                    <th>kbase title</th>
+                    <th>certs linked with the kbase</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for each in result_list %}
+                    <tr>
+                        {% if each.1 == 72 %}    
+                            <td> <a href="https://access.redhat.com/site/solutions/{{ each.0 }}"> {{ each.0 }} </a></td>
+                            <td>{{ each.2 }}</td>
+                            <td>{{ each.3 }}</td>
+                        {% elif each.1 == 73 %}
+                            <td> <a href="https://access.redhat.com/site/articles/{{ each.0 }}"> {{ each.0 }} </a></td>
+                            <td>{{ each.2 }}</td>
+                            <td>{{ each.3 }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h5>Number in total is {{ number_intotal }}</h5>
+        <hr>
+        <div style="margin: 5px 0" class="clearfix">
+            <a href="/search/" class="btn btn-success">Return</a>
+        </div>
+    </div>
+</body>
+</html>

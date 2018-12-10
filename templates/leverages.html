@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cert data Search</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3>leverage results of cert {{ case_number }}</h3>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Test ID</th>
+                    <th>Device</th>
+                    <th>Test class</th>
+                    <th>Original Device</th>
+                    <th>Original cert Version</th>
+                    <th>Original cert platform</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if result_list|length > 0 %}
+                    {% for each in result_list %}
+                        <tr>
+                            <td>{{ each.0 }}</td>
+                            <td>{{ each.1 }}</td>
+                            <td>{{ each.2 }}</td>
+                            <td>
+                                {% for each_item in each.3 %}
+                                    {{ each_item }}<br>
+                                {% endfor %}
+                            </td>
+                            <td>{{ each.4 }}</td>
+                            <td>{{ each.5 }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td>No unconfimred leverage IDs in this cert</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Following are the test IDs that are not marked as confirmed in the original cert,need to check manually</th>
+                </tr>
+            </thead>
+            <tboday>
+                <tr>
+                    <td>
+                        {{ ids_not_confirmed }}
+                    </td>
+                </tr>
+            </tboday>
+        </table>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Following are the component IDs that the component cert has not been closed or a pass-through,need to check manually</th>
+                </tr>
+            </thead>
+            <tboday>
+                <tr>
+                    <td>
+                        {{ unconfirmed_cert_ids }}
+                    </td>
+                </tr>
+            </tboday>
+        </table>
+
+        <hr>
+        <div style="margin: 5px 0" class="clearfix">
+            <a href="/search/" class="btn btn-success">Return</a>
+        </div>
+    </div>
+</body>
+</html>

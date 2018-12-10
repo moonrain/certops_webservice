@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cert data Search</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h3>certs need TAM_ack of PTAM/EPM "{{ TAM }}" </h3>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Portal ID</th>
+                    <th>case number</th>
+                    <th>vendor name</th>
+                    <th>make name</th>
+                    <th>model name</th>
+                    <th>version</th>
+                    <th>platform</th>
+                    <th>cert type</th>
+                    <th>PTAM/EPM</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for each in result_list %}
+                    <tr>
+                        {% for each_item in each %}
+                            <td>{{ each_item }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h5>Number in total is {{ number_intotal }}</h5>
+        <hr>
+        <div style="margin: 5px 0" class="clearfix">
+            <a href="/search/" class="btn btn-success">Return</a>
+        </div>
+    </div>
+</body>
+</html>
