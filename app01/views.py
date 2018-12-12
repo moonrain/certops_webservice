@@ -34,27 +34,27 @@ def search_main(request):
         portal_case = request.POST.get("portal_case")
 
     if device_name:
-        return redirect("/search/component/%s" %device_name)
+        return redirect("/search/component/%s" %device_name.strip())
     if product_name:
-        return redirect("/search/product/%s" % product_name)
+        return redirect("/search/product/%s" % product_name.strip())
     if model_name:
-        return redirect("/search/model/%s" % model_name)
+        return redirect("/search/model/%s" % model_name.strip())
     if make_name:
-        return redirect("/search/make/%s" % make_name)
+        return redirect("/search/make/%s" % make_name.strip())
     if cert_id:
-        return redirect("/search/leverage/%s" % cert_id)
+        return redirect("/search/leverage/%s" % cert_id.strip())
     if kbase:
-        return redirect("/search/kbase-title/%s" % kbase)
+        return redirect("/search/kbase-title/%s" % kbase.strip())
     if account:
-        return redirect("/search/account-cert/%s" % account)
+        return redirect("/search/account-cert/%s" % account.strip())
     if vendor:
-        return redirect("/search/partner-cert/%s" % vendor)
+        return redirect("/search/partner-cert/%s" % vendor.strip())
     if TAM:
-        return redirect("/search/TAM-ack-cert/%s" % TAM)
+        return redirect("/search/TAM-ack-cert/%s" % TAM.strip())
     if TAM_vendor:
-        return redirect("/search/vendor-TAM/%s" % TAM_vendor)
+        return redirect("/search/vendor-TAM/%s" % TAM_vendor.strip())
     if portal_case:
-        return redirect("/search/portal_id-case_number/%s" % portal_case)
+        return redirect("/search/portal_id-case_number/%s" % portal_case.strip())
 
     return HttpResponse("the search path is incorrect!")
 
