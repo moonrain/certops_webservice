@@ -128,71 +128,76 @@ class Result_Reivew(object):
 
 
     '''
-    [
-        rpm_file1: [
-                        (
-                        test_id: xxxx,
-                        run: xxxx,
-                        test_type: xxxx,
-                        status: xxxx,
-                        is_fv: xxxx,
-                        subtest:[
-                                name: xxxx,
-                                status: xxxx,
-                                ],
-                        device: xxxx,
-                        pci_id: xxxx,
-                        driver: xxxx,
-                        ),
+        [
+            rpm_file1: [
+                            (
+                            test_id: xxxx,
+                            run: xxxx,
+                            test_type: xxxx,
+                            status: xxxx,
+                            is_fv: xxxx,
+                            subtest:[
+                                    name: xxxx,
+                                    status: xxxx,
+                                    ],
+                            device: xxxx,
+                            udi: xxxx,
+                            pci_id: xxxx,
+                            driver: xxxx,
+                            ),
 
-                        (
-                        test_id: xxxx,
-                        run: xxxx,
-                        test_type: xxxx,
-                        status: xxxx,
-                        is_fv: xxxx,
-                        subtest:[
-                                name: xxxx
-                                status: xxxx
-                                ],
-                        device: xxxx,
-                        pci_id: xxxx,
-                        driver: xxxx,
-                        ),
-                    ],
+                            (
+                            test_id: xxxx,
+                            run: xxxx,
+                            test_type: xxxx,
+                            status: xxxx,
+                            is_fv: xxxx,
+                            subtest:[
+                                    name: xxxx
+                                    status: xxxx
+                                    ],
+                            device: xxxx,
+                            udi: xxxx,
+                            pci_id: xxxx,
+                            driver: xxxx,
+                            ),
+                        ],
 
-        rpm_file2: [
-                        (
-                        test_id: xxxx,
-                        run: xxxx,
-                        test_type: xxxx,
-                        status: xxxx,
-                        is_fv: xxxx,
-                        subtest:[
-                                name: xxxx,
-                                status: xxxx,
-                                ],
-                        device: xxxx,
-                        pci_id: xxxx,
-                        driver: xxxx,
-                        ),
+            rpm_file2: [
+                            (
+                            test_id: xxxx,
+                            run: xxxx,
+                            test_type: xxxx,
+                            status: xxxx,
+                            is_fv: xxxx,
+                            subtest:[
+                                    name: xxxx,
+                                    status: xxxx,
+                                    ],
+                            device: xxxx,
+                            udi: xxxx,
+                            pci_id: xxxx,
+                            driver: xxxx,
+                            ),
 
-                        (
-                        test_id: xxxx,
-                        run: xxxx,
-                        test_type: xxxx,
-                        status: xxxx,
-                        is_fv: xxxx,
-                        subtest:[
-                                name: xxxx
-                                status: xxxx
-                                ],
-                        device: xxxx,
-                        pci_id: xxxx,
-                        driver: xxxx,
-                        ),
-                    ],
-    ]
+                            (
+                            test_id: xxxx,
+                            run: xxxx,
+                            test_type: xxxx,
+                            status: xxxx,
+                            is_fv: xxxx,
+                            subtest:[
+                                    name: xxxx
+                                    status: xxxx
+                                    ],
+                            device: xxxx,
+                            udi: xxxx,
+                            pci_id: xxxx,
+                            driver: xxxx,
+                            ),
+                        ],
+        ]
     '''
+
     pass
 
